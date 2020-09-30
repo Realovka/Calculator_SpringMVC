@@ -3,12 +3,16 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>Home</title>
+    <title>Calc</title>
 </head>
 <body>
-<form action="/home/calc" method="post">
+<form action="/calculator/calc" method="post">
     Number 1<input type="number" name="num1" value="${num1}"/>
     Action <select name="type">
+    <option>add</option>
+    <option>sub</option>
+    <option>mult</option>
+    <option>div</option>
         <c:forEach items="${operations}" var="item">
             <c:if test="${type.equals(item)}">
                 <option selected="selected">${item}</option>
