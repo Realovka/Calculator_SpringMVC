@@ -42,7 +42,7 @@ public class RegistrationAndAuthorizationController {
     @PostMapping(path = "/auth")
     public ModelAndView postAuthorization(User user, ModelAndView modelAndView) {
         if (userService.validateUser(user)) {
-            modelAndView.setViewName("/calc");
+            modelAndView.setViewName("calc");
         }
         return modelAndView;
     }
